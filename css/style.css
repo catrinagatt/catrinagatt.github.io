@@ -70,3 +70,21 @@ text-align: center;
 padding: 1rem;
 font-size: 11px;
 }
+
+/* CONTENT SPACING */
+
+section {
+margin-top: 2rem;
+}
+
+h2 {
+margin-bottom: 0.5rem;
+}
+
+h3 {
+margin-bottom: 0.5rem;
+}
+
+ul {
+margin-left: 1.5rem;
+}
