@@ -7,7 +7,7 @@ box-sizing: border-box;
 
 /* COLOUR PALETTE */
 :root {
---primary-blue: #2A5C82;
+--primary-blue: #000043;
 --secondary-orange: #EE7B30;
 --dark-grey: #333333;
 --light-bg: #F5F5F5;
@@ -126,5 +126,12 @@ nav ul {
     flex-direction: column;
     gap: 0.5rem;
 }
+}
+
+/* LOGO IN NAVIGATION */
+
+.logo {
+height: 40px;
+width: auto;
 }
 
