@@ -8,7 +8,7 @@ box-sizing: border-box;
 /* COLOUR PALETTE */
 :root {
 --primary-blue: #000043;
---secondary-orange: #EE7B30;
+--secondary-blue: #1E4560;
 --dark-grey: #333333;
 --light-bg: #F5F5F5;
 }
@@ -33,11 +33,6 @@ align-items: center;
 gap: 2rem;
 }
 
-nav h1 {
-color: white;
-font-size: 20px;
-}
-
 nav ul {
 list-style: none;
 display: flex;
@@ -50,28 +45,19 @@ text-decoration: none;
 }
 
 nav a:hover {
-color: var(--secondary-orange);
+color: var(--secondary-blue);
+}
+
+/* LOGO */
+.logo {
+height: 40px;
+width: auto;
 }
 
 /* MAIN CONTENT */
 main {
 padding: 2rem;
 }
-
-main h2 {
-font-size: 24px;
-margin-bottom: 0.5rem;
-}
-
-/* FOOTER */
-footer {
-background-color: #eaeaea;
-text-align: center;
-padding: 1rem;
-font-size: 11px;
-}
-
-/* CONTENT SPACING */
 
 section {
 margin-top: 2rem;
@@ -85,18 +71,94 @@ h3 {
 margin-bottom: 0.5rem;
 }
 
-ul {
-margin-left: 1.5rem;
+/* HERO SECTION */
+.hero {
+height: 40vh;
+background-image: url("images/hero-campus.jpg");
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
 }
 
-/* FORM STYLES */
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background-color: rgba(0, 0, 67, 0.6);
+}
 
+.hero-content {
+position: relative;
+color: white;
+text-align: center;
+max-width: 600px;
+padding: 2rem;
+}
+
+.hero-content h1 {
+font-size: 36px;
+margin-bottom: 1rem;
+}
+
+.hero-content p {
+font-size: 16px;
+}
+
+/* QUICK LINKS / CARDS */
+.quick-links {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.quick-card {
+background-color: #E6EEF5;
+padding: 2rem;
+text-align: center;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+color: var(--dark-grey);
+}
+
+
+.quick-card p {
+font-size: 13px;
+margin-bottom: 1.5rem;
+}
+
+.card-link {
+display: inline-block;
+background-color: var(--secondary-blue);
+color: white;
+padding: 0.6rem 1.2rem;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+border: 2px solid var(--secondary-blue);
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.card-link:hover {
+background-color: white;
+color: var(--secondary-blue);
+}
+
+
+
+
+/* FORM STYLES */
 form {
 max-width: 400px;
 margin-top: 1.5rem;
 }
 
-input, textarea {
+input,
+textarea {
 width: 100%;
 padding: 0.5rem;
 margin-top: 0.25rem;
@@ -111,11 +173,18 @@ cursor: pointer;
 }
 
 button:hover {
-background-color: #1E4560;
+background-color: var(--secondary-blue);
+}
+
+/* FOOTER */
+footer {
+background-color: #eaeaea;
+text-align: center;
+padding: 1rem;
+font-size: 11px;
 }
 
 /* RESPONSIVE NAV */
-
 @media (max-width: 768px) {
 nav {
     flex-direction: column;
@@ -126,12 +195,8 @@ nav ul {
     flex-direction: column;
     gap: 0.5rem;
 }
+
+.hero {
+    height: 30vh;
 }
-
-/* LOGO IN NAVIGATION */
-
-.logo {
-height: 40px;
-width: auto;
 }
-
